@@ -6,15 +6,27 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/template/header/header.component';
 
-import { MatToolbarModule } from '@angular/material/toolbar';
 import { FooterComponent } from './components/template/footer/footer.component';
 import { NavComponent } from './components/template/nav/nav.component';
+import { HomeComponent } from './views/home/home.component';
+import { FormsModule } from '@angular/forms';
 
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
-import { HomeComponent } from './views/home/home.component';
-import { ListcafeCrudComponent } from './views/listcafe-crud/listcafe-crud.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select'
+
+
+import { ColaboradorCrudComponent } from './views/colaborador-crud/colaborador-crud.component';
+import { ColaboradorCreateComponent } from './components/colaborador/colaborador-create/colaborador-create.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ColaboradorReadComponent } from './components/colaborador/colaborador-read/colaborador-read.component';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +35,9 @@ import { ListcafeCrudComponent } from './views/listcafe-crud/listcafe-crud.compo
     FooterComponent,
     NavComponent,
     HomeComponent,
-    ListcafeCrudComponent
+    ColaboradorCrudComponent,
+    ColaboradorCreateComponent,
+    ColaboradorReadComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +46,14 @@ import { ListcafeCrudComponent } from './views/listcafe-crud/listcafe-crud.compo
     MatToolbarModule,
     MatSidenavModule,
     MatListModule,
-    MatCardModule
+    MatCardModule,
+    MatButtonModule,
+    MatSnackBarModule,
+    HttpClientModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

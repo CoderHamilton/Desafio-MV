@@ -3,7 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 
 // IMPORTAÇÃO DAS PAGES DA APLICAÇÃO
 import { HomeComponent } from './views/home/home.component';
-import { ListcafeCrudComponent } from './views/listcafe-crud/listcafe-crud.component';
+import { ColaboradorCrudComponent } from './views/colaborador-crud/colaborador-crud.component';
+import { ColaboradorCreateComponent } from './components/colaborador/colaborador-create/colaborador-create.component'
 
 const routes: Routes = [
   {
@@ -12,7 +13,11 @@ const routes: Routes = [
   },
   {
     path: "listcoffe",
-    component: ListcafeCrudComponent
+    component: ColaboradorCrudComponent
+  },
+  {
+    path: "colaborador/create",
+    component: ColaboradorCreateComponent
   }
 ];
 
