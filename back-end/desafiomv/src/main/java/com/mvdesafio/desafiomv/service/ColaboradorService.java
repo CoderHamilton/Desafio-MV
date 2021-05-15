@@ -48,11 +48,15 @@ public class ColaboradorService {
 
     public Colaborador update(Colaborador colaborador) {
          Colaborador colaboradorNew = findById(colaborador.getId());
+         updateData(colaboradorNew, colaborador);
          return repository.save(colaboradorNew);
     }
 
     private void updateData(Colaborador colaboradorNew, Colaborador colaborador) {
-        colaboradorNew.setItensCafeManha(colaborador.getItensCafeManha());
+        if (colaborador.getCpf() != null)
+            colaboradorNew.setCpf(colaborador.getCpf());
+        if (colaborador.getNome() != null)
+            colaboradorNew.setNome(colaborador.getNome());
     }
 
     public void delete(Integer colaboradorId) {

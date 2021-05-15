@@ -20,8 +20,8 @@ export class ColaboradorDeleteComponent implements OnInit {
 
   ngOnInit(): void {
     const id = parseInt(this.route.snapshot.paramMap.get('id')!);
-    this.colaboradorService.readById(id).subscribe(colaborador => {
-      this.colaborador = this.colaborador
+    this.colaboradorService.readById(id).subscribe(colab => {
+      this.colaborador = colab
     })    
   }
 

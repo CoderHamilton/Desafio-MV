@@ -23,6 +23,12 @@ public class ColaboradorController {
         return ResponseEntity.ok().body(colaboradores);
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<Colaborador> findById(@PathVariable Integer id) {
+        Colaborador colaborador = service.findById(id);
+        return ResponseEntity.ok().body(colaborador);
+    }
+
     @PostMapping
     public ResponseEntity<Object> insert(@RequestBody Colaborador colaborador) {
         if (service.validarSeCpfJaCadastrado(colaborador.getCpf())) {
