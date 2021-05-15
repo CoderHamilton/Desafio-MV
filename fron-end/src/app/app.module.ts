@@ -20,7 +20,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select'
-
+import { MatTableModule } from '@angular/material/table';
 
 import { ColaboradorCrudComponent } from './views/colaborador-crud/colaborador-crud.component';
 import { ColaboradorCreateComponent } from './components/colaborador/colaborador-create/colaborador-create.component';
@@ -54,6 +54,7 @@ import { ColaboradorReadComponent } from './components/colaborador/colaborador-r
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
+    MatTableModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

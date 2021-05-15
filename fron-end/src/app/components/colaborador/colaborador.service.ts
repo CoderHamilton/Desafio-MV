@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class ColaboradorService {
 
-  baseUrl ="Qualquer coisa"
+  baseUrl ="http://localhost:8080/colaboradores";
 
   constructor(
     private snackBar: MatSnackBar,
@@ -17,7 +17,7 @@ export class ColaboradorService {
   ) { }
 
   showMessage(msg: string): void {
-    this.snackBar.open(msg, '', {
+    this.snackBar.open(msg, "X", {
       duration: 3000,
       horizontalPosition: 'right',
       verticalPosition: 'top'
@@ -30,6 +30,11 @@ export class ColaboradorService {
 
   read(): Observable<Colaborador[]> {
     return this.http.get<Colaborador[]>(this.baseUrl)
+  }
+
+  readById(id: string): Observable<Colaborador> {
+    const url = `${this.baseUrl}/${id}`
+    return this.http.get<Colaborador>(url)
   }
 
 }

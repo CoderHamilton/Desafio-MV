@@ -13,7 +13,6 @@ export class ColaboradorCreateComponent implements OnInit {
   colaborador: Colaborador = {
     name: '',
     cpf: '',
-    itemCafe: ''
   }
 
   constructor(
