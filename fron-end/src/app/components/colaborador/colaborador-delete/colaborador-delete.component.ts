@@ -19,14 +19,14 @@ export class ColaboradorDeleteComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    const id = +this.route.snapshot.paramMap.get('id')!;
+    const id = this.route.snapshot.params.id;
     this.colaboradorService.readById(id).subscribe(colaborador => {
       this.colaborador = this.colaborador
     })    
   }
 
   deleteColaborador(): void {
-    this.colaboradorService.delete(+this.colaborador.id!).subscribe(() => {
+    this.colaboradorService.delete(this.colaborador.id).subscribe(() => {
       this.colaboradorService.showMessage('Exclusão efetuada com sucesso"')
       this.router.navigate(["/listcoffe"]);
     })
