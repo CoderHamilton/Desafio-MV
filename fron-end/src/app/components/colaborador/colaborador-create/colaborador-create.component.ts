@@ -11,7 +11,7 @@ import { Colaborador } from './../colaborador.model';
 export class ColaboradorCreateComponent implements OnInit {
 
   colaborador: Colaborador = {
-    name: '',
+    nome: '',
     cpf: '',
   }
 

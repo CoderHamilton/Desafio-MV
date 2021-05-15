@@ -2,33 +2,33 @@
 
   <table mat-table [dataSource]="colaboradores">
     <!-- ID Coluna -->
-    <ng-container matColummDef="id">
-      <th mat-header-cell *matHeaderCellDef>ID</th>
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef>id</th>
       <td mat-cell *matCellDef="let row">{{row.id}}</td>
     </ng-container>
     
     <!-- Name coluna -->
-    <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef>Name</th>
-      <td mat-cell *matCellDef="let row">{{row.name}}</td>
+    <ng-container matColumnDef="nome">
+      <th mat-header-cell *matHeaderCellDef>nome</th>
+      <td mat-cell *matCellDef="let row">{{row.nome}}</td>
     </ng-container>
 
     <!-- CPF coluna -->
     <ng-container matColumnDef="cpf">
-      <th mat-header-cell *matHeaderCellDef>CPF</th>
-      <td mat-cell *matCellDef="let row">{{ row.cpf}}</td>
+      <th mat-header-cell *matHeaderCellDef>cpf</th>
+      <td mat-cell *matCellDef="let row">{{row.cpf}}</td>
     </ng-container>
 
     <!-- Action coluna -->
     <ng-container matColumnDef="action">
       <th mat-header-cell *matHeaderCellDef>Ações</th>
       <td mat-cell *matCellDef="let row">
-        <a routerLink="" class="edit">
+        <a routerLink="/colaborador/update/{{ row.id }}" class="edit">
           <i class="material-icons">
             edit
           </i>
         </a>
-        <a routerLink="" class="delete">
+        <a routerLink="/colaborador/delete/{{ row.id }}" class="delete">
           <i class="material-icons">
             delete
           </i>

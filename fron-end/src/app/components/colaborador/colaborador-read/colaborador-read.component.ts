@@ -11,7 +11,7 @@ import { Component, OnInit } from '@angular/core';
 export class ColaboradorReadComponent implements OnInit {
 
   colaboradores: Colaborador[] = [];
-  displayedColumns = ['id', 'name', 'cpf', 'action']
+  displayedColumns = ['id', 'nome', 'cpf', 'action']
 
   constructor(private colaboradorService: ColaboradorService) {}
 

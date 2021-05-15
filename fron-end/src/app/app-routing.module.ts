@@ -5,6 +5,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './views/home/home.component';
 import { ColaboradorCrudComponent } from './views/colaborador-crud/colaborador-crud.component';
 import { ColaboradorCreateComponent } from './components/colaborador/colaborador-create/colaborador-create.component'
+import { ColaboradorUpdateComponent } from './components/colaborador/colaborador-update/colaborador-update.component';
+import { ColaboradorDeleteComponent } from './components/colaborador/colaborador-delete/colaborador-delete.component';
 
 const routes: Routes = [
   {
@@ -18,7 +20,15 @@ const routes: Routes = [
   {
     path: "colaborador/create",
     component: ColaboradorCreateComponent
-  }
+  },
+  {
+    path: "colaborador/update/:id",
+    component: ColaboradorUpdateComponent
+  },
+  {
+    path: "colaborador/delete/:id",
+    component: ColaboradorDeleteComponent
+  },
 ];
 
 @NgModule({

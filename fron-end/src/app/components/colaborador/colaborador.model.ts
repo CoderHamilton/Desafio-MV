@@ -1,5 +1,5 @@
-export interface Colaborador {
+export interface Colaborador {  
   id?: number
-  name: string
+  nome: string
   cpf: string
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { HeaderService } from 'src/app/components/template/header/header.service';
 
 @Component({
   selector: 'app-colaborador-crud',
@@ -8,7 +9,17 @@ import { Router } from '@angular/router';
 })
 export class ColaboradorCrudComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(
+    private router: Router,
+    private headerService: HeaderService
+  ) 
+    {
+      headerService.headerData = {
+        title: 'Cadastro de Colaboradores',
+        icon: 'list',
+        routeUrl: '/colaborador'
+      }
+    }
 
   ngOnInit(): void {
   }

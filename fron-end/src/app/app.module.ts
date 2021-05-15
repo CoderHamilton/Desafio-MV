@@ -26,6 +26,8 @@ import { ColaboradorCrudComponent } from './views/colaborador-crud/colaborador-c
 import { ColaboradorCreateComponent } from './components/colaborador/colaborador-create/colaborador-create.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ColaboradorReadComponent } from './components/colaborador/colaborador-read/colaborador-read.component';
+import { ColaboradorDeleteComponent } from './components/colaborador/colaborador-delete/colaborador-delete.component';
+import { ColaboradorUpdateComponent } from './components/colaborador/colaborador-update/colaborador-update.component';
 
 
 @NgModule({
@@ -37,7 +39,9 @@ import { ColaboradorReadComponent } from './components/colaborador/colaborador-r
     HomeComponent,
     ColaboradorCrudComponent,
     ColaboradorCreateComponent,
-    ColaboradorReadComponent
+    ColaboradorReadComponent,
+    ColaboradorDeleteComponent,
+    ColaboradorUpdateComponent
   ],
   imports: [
     BrowserModule,
