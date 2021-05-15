@@ -19,7 +19,7 @@ export class ColaboradorUpdateComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    const id = this.route.snapshot.params.id;
+    const id = parseInt(this.route.snapshot.paramMap.get('id')!);
     this.colaboradorService.readById(id).subscribe((colaborador) => {
       this.colaborador = colaborador
     });    
